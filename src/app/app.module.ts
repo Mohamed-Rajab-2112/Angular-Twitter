@@ -9,6 +9,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { TweetsTableComponent } from './components/tweets-table/tweets-table.component';
 import { FormsModule } from "@angular/forms";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,11 @@ import { FormsModule } from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,17 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-search-input',
   templateUrl: './search-input.component.html',
   styleUrls: ['./search-input.component.scss']
 })
-export class SearchInputComponent implements OnInit {
+export class SearchInputComponent {
   @Input() name: string;
   @Input() placeholder: string;
+  @Output() emitSearchText: EventEmitter<string> = new EventEmitter();
   searchText: string;
-  constructor() { }
+  searchIcon = faSearch;
 
-  ngOnInit() {
+  constructor() {
+  }
+
+  submitSearch() {
+    this.emitSearchText.emit(this.searchText);
   }
 
 }

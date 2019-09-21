@@ -1,8 +1,58 @@
-.search-input {
-  .search-input--label {
+@import "../../styles/colors";
 
+.search-form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: .9em;
+    color: $darkGrey;
+    margin-bottom: 10px;
   }
-  .search-input--field {
 
+  .search-input {
+    position: relative;
+    width: 250px;
+
+    &__field {
+      height: 40px;
+      width: 100%;
+      padding: 15px 30px 15px 15px;
+      box-sizing: border-box;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid $lightGrey;
+      font-size: .9em;
+
+      &::placeholder {
+        font-size: 1em;
+        color: $lightGrey;
+      }
+    }
+
+    &__icon {
+      color: $lightGrey;
+      font-size: 1.4em;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      transform: translateY(-50%);
+      top: 50%;
+      position: absolute;
+      right: 3px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__error-message {
+    font-size: .8em;
+    color: red;
+    margin-top: 5px;
   }
 }

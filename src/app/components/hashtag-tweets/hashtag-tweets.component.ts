@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HashtagTweetsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  searchTweets(hashtag) {
+    console.log(hashtag);
   }
 
 }

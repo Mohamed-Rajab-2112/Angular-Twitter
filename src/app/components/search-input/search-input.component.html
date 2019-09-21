@@ -1,4 +1,10 @@
-<form #searchForm='ngForm' class="search-input">
-    <label for="search" class="search-input--label">{{name}}</label>
-    <input id="search" [(ngModel)]="searchText" name="search" class="search-input--field" [placeholder]="placeholder">
+<form autocomplete="off" (ngSubmit)="searchForm.valid && submitSearch()" #searchForm='ngForm' class="search-form">
+    <label for="search" class="search-form__label">{{name}}</label>
+    <div class="search-input">
+        <input required id="search" [(ngModel)]="searchText" name="search" class="search-input__field" [placeholder]="placeholder">
+        <button type="submit"><fa-icon class="search-input__icon" [icon]="searchIcon"></fa-icon>
+        </button>
+    </div>
+
+    <p class="search-form__error-message" *ngIf="searchForm.submitted && searchForm?.controls?.search?.invalid">Search Text Required</p>
 </form>

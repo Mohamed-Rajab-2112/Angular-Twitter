@@ -1,7 +1,8 @@
 @import "./styles/colors";
+@import "./styles/aligement";
 .title-and-tabs {
-  margin-left: 40px;
-  margin-top: 40px;
+  margin-left: $sideMargin;
+  margin-top: $sideMargin;
   h2 {
     font-weight: normal;
     margin-bottom: 35px;
@@ -11,4 +12,5 @@
 
 .app-body {
   background-color: $backgroundColor;
+  padding: $sideMargin;
 }

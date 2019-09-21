@@ -1,1 +1,4 @@
-<p>user-tweets works!</p>
+<div class="user-tweets animated fadeIn">
+    <app-search-input (emitSearchText)="searchTweets($event)" [placeholder]="'Search by User'" [name]="'User search'"></app-search-input>
+    <app-tweets-table></app-tweets-table>
+</div>

@@ -1,2 +1,4 @@
-<app-search-input [placeholder]="'Search by Hashtag'" [name]="'Hashtag search'"></app-search-input>
-<app-tweets-table></app-tweets-table>
+<div class="hashtag-tweets animated fadeIn">
+    <app-search-input (emitSearchText)="searchTweets($event)" [placeholder]="'Search by Hashtag'" [name]="'Hashtag search'"></app-search-input>
+    <app-tweets-table></app-tweets-table>
+</div>
