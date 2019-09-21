@@ -1,0 +1,14 @@
+@import "./styles/colors";
+.title-and-tabs {
+  margin-left: 40px;
+  margin-top: 40px;
+  h2 {
+    font-weight: normal;
+    margin-bottom: 35px;
+    font-size: 1.4em;
+  }
+}
+
+.app-body {
+  background-color: $backgroundColor;
+}

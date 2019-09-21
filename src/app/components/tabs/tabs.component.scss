@@ -1,0 +1,18 @@
+@import "../../styles/colors";
+ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    display: inline-block;
+    a {
+      padding: 10px 15px;
+text-decoration: none;
+      color: black;
+      &.active {
+        background-color: $backgroundColor;
+        color: blueviolet;
+        transition: all .5s;
+      }
+    }
+  }
+}
