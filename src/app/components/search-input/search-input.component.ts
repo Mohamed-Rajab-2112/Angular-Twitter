@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,6 +8,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class SearchInputComponent {
   @Input() name: string;
+  @Input() disable: boolean;
   @Input() placeholder: string;
   @Output() emitSearchText: EventEmitter<string> = new EventEmitter();
   searchText: string;

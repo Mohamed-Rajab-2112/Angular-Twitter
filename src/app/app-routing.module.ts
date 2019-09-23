@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HashtagTweetsComponent } from './components/hashtag-tweets/hashtag-tweets.component';
 import { UserTweetsComponent } from './components/user-tweets/user-tweets.component';
-import { AppRoutes } from './routes';
+import { AppRoutes } from './app-routes';
 
 const routes: Routes = [
   {

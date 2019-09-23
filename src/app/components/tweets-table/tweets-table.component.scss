@@ -1,0 +1,39 @@
+@import "../../styles/colors";
+
+div {
+  background-color: #fff;
+  padding: 0 25px;
+  margin-top: 30px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+      th, td {
+        border-bottom: 2px solid $backgroundColor;
+      }
+
+      th {
+        height: 50px;
+        font-size: 1em;
+        color: $darkGrey;
+        font-weight: normal;
+        min-width: 100px;
+        &:last-child {
+          padding-right: 200px;
+        }
+      }
+
+      td {
+        height: 80px;
+        font-size: 1em;
+        font-weight: normal;
+        &.interaction-style {
+          color: $darkGrey;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}

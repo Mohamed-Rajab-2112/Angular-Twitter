@@ -10,6 +10,11 @@ import { SearchInputComponent } from './components/search-input/search-input.com
 import { TweetsTableComponent } from './components/tweets-table/tweets-table.component';
 import { FormsModule } from "@angular/forms";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TweetsService } from "./services/tweets.service";
+import { HttpClientModule } from "@angular/common/http";
+import { TweetHashtagsPipe } from './pipes/tweet-hashtags.pipe';
+import { TweetTextPipe } from './pipes/tweet-text.pipe';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +23,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     UserTweetsComponent,
     TabsComponent,
     SearchInputComponent,
-    TweetsTableComponent
+    TweetsTableComponent,
+    TweetHashtagsPipe,
+    TweetTextPipe,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TweetsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
