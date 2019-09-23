@@ -10,6 +10,7 @@ export class SearchInputComponent {
   @Input() name: string;
   @Input() disable: boolean;
   @Input() placeholder: string;
+  @Input() currentSearch: string;
   @Output() emitSearchText: EventEmitter<string> = new EventEmitter();
   searchText: string;
   searchIcon = faSearch;
@@ -18,7 +19,7 @@ export class SearchInputComponent {
   }
 
   submitSearch() {
-    this.emitSearchText.emit(this.searchText);
+    this.emitSearchText.emit(this.currentSearch);
   }
 
 }

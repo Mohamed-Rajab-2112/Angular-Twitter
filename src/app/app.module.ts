@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { TweetHashtagsPipe } from './pipes/tweet-hashtags.pipe';
 import { TweetTextPipe } from './pipes/tweet-text.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     TweetsTableComponent,
     TweetHashtagsPipe,
     TweetTextPipe,
-    LoadingComponent
+    LoadingComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

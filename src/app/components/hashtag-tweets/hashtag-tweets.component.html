@@ -1,7 +1,9 @@
 <div class="hashtag-tweets animated fadeIn">
-    <app-search-input [disable]="toggleLoading" (emitSearchText)="searchTweets($event)" [placeholder]="'Search by Hashtag'"
+    <app-search-input [disable]="toggleLoading"
+                      (emitSearchText)="routeToSearchPage($event)" [placeholder]="'Search by Hashtag'"
+                      [currentSearch]="hashTag || ''"
                       [name]="'Hashtag search'"></app-search-input>
-    <app-tweets-table *ngIf="!toggleLoading" [tweets]="tweets"></app-tweets-table>
+    <app-tweets-table [currentPage]="currentPage" (newPage)="routeToSearchPage(hashTag, $event)" *ngIf="!toggleLoading" [tweets]="tweets"></app-tweets-table>
 </div>
 
 <app-loading *ngIf="toggleLoading"></app-loading>

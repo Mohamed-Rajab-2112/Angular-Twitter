@@ -1,8 +1,8 @@
 @import "../../styles/colors";
 
-div {
+.table-container {
   background-color: #fff;
-  padding: 0 25px;
+  padding: 0 25px 35px;
   margin-top: 30px;
 
   table {
@@ -33,6 +33,26 @@ div {
           color: $darkGrey;
           font-size: 1.1em;
         }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    &--page {
+      padding: 10px 15px;
+      margin: 10px 0 0 20px;
+      border: 1px solid $lightGrey;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        background-color: cornflowerblue;
+        border: none;
+        color: white;
       }
     }
   }
