@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppRoutes } from "./app-routes";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Twitter';
+
+  tabs = [
+    {
+      name: 'Hashtag search',
+      url: AppRoutes.hashtagTweets
+    },
+    {
+      name: 'User search',
+      url: AppRoutes.userTweets
+    }
+  ];
 }

@@ -1,0 +1,11 @@
+
+<div class="user-tweets animated fadeIn">
+    <app-search-input [disable]="toggleLoading"
+                      (emitSearchText)="routeToSearchPage($event)" [placeholder]="'Search by User'" [name]="'User search'"
+                      [currentSearch]="user || ''"
+                      ></app-search-input>
+    <app-tweets-table [currentPage]="currentPage" (newPage)="routeToSearchPage(user, $event)" *ngIf="!toggleLoading" [tweets]="tweets"></app-tweets-table>
+</div>
+
+<app-loading *ngIf="toggleLoading"></app-loading>
+

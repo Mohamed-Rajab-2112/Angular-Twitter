@@ -1,0 +1,24 @@
+<div class="table-container" *ngIf="tweets?.length">
+    <table>
+    <tr>
+        <th class="text-left">Tweet</th>
+        <th class="text-center">Likes</th>
+        <th class="text-center">Replies</th>
+        <th class="text-center" >Retweets</th>
+        <th class="text-left">Hashtags</th>
+        <th class="text-left">Date</th>
+    </tr>
+    <tr *ngFor="let tweet of pageTweets">
+        <td>{{tweet?.text | tweetText}}</td>
+        <td class="text-center interaction-style">{{tweet?.likes || '-'}}</td>
+        <td class="text-center interaction-style">{{tweet?.replies || '-'}}</td>
+        <td class="text-center interaction-style">{{tweet?.retweets || '-'}}</td>
+        <td>{{tweet?.hashtags | tweetHashtags}}</td>
+        <td>{{tweet?.date | date:'MMM d, y'}}</td>
+    </tr>
+</table>
+
+    <div class="pagination">
+        <div [ngClass]="currentPage == pageNumber ? ['active'] : []" class="pagination--page" (click)="changePage(pageNumber)" *ngFor="let pageNumber of pages">{{pageNumber}}</div>
+    </div>
+</div>
