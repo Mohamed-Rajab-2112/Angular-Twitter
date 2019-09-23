@@ -1,0 +1,59 @@
+@import "../../styles/colors";
+
+.table-container {
+  background-color: #fff;
+  padding: 0 25px 35px;
+  margin-top: 30px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+      th, td {
+        border-bottom: 2px solid $backgroundColor;
+      }
+
+      th {
+        height: 50px;
+        font-size: 1em;
+        color: $darkGrey;
+        font-weight: normal;
+        min-width: 100px;
+        &:last-child {
+          padding-right: 200px;
+        }
+      }
+
+      td {
+        height: 80px;
+        font-size: 1em;
+        font-weight: normal;
+        &.interaction-style {
+          color: $darkGrey;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    &--page {
+      padding: 10px 15px;
+      margin: 10px 0 0 20px;
+      border: 1px solid $lightGrey;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        background-color: cornflowerblue;
+        border: none;
+        color: white;
+      }
+    }
+  }
+}

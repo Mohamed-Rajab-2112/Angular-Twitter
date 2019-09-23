@@ -1,0 +1,24 @@
+@import "../../styles/colors";
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 9px;
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: black;
+      font-size: .9em;
+
+      &.active {
+        background-color: $backgroundColor;
+        color: #552299;
+        transition: all .5s;
+      }
+    }
+  }
+}
